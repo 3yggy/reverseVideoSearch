@@ -13,10 +13,10 @@
     <div class='input'>
 
         <label id="uploadDrop" >
-            
                        
             <form class='uploadDrop'>
-                <input  type="file" id="fileElem" multiple accept="video/*" onchange="upload(this.files)">
+                <div style="text-align: center;">UPLOAD</div>
+                <input  type="file" id="fileElem" multiple accept="video/*" onchange="upload(this.files)" style="top: 50%; left: 30%; position: relative;">
             </form>
         </label>
       
@@ -28,7 +28,7 @@
             </div>
 
             <div>
-                <button onclick="Search()" style="width: 100%; height: 25%;">
+                <button onclick="Search()" style="width: 100%; height: 150px;">
                     Search
                     
                 </button>
@@ -49,9 +49,6 @@
                     <div class="dragOpener" onclick="CORSWindow('https://tineye.com/')">TinyEye<br>(Copy, Click, Paste)<br>(As Image; Avoid Data Url)</div>
                 </div>
             </div>
-
-
-
     </div>
 </body>
 </html>
@@ -83,9 +80,6 @@
     float: left;
     width: 100%;
     left: 0;
-    
-    justify-content: ce;
-
 }
 
 .thumbnailPreview{
