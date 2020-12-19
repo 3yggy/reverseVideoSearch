@@ -1,10 +1,7 @@
 window.onload = function() {
     var elms = document.getElementsByTagName("*");
     for (i = 0; i < elms.length; i++) {
-       
-        elms[i].style.backgroundColor = "#"+ Math.floor(Math.random()*6777215 + 10000000).toString(16)
-            console.log(elms[i].style.backgroundColor)
-
+        elms[i].style.backgroundColor = "#"+ Math.floor(Math.random()*6777215 + 10000000).toString(16);
     }
 
     let slider = document.getElementById('slider');
