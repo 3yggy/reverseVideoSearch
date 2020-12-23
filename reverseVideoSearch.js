@@ -22,7 +22,7 @@ window.onload = function() {
     slider.oninput = slide;
 };
 
-const extensionLists = ['m4v', 'avi','mpg','mp4', 'webm'];  
+const extensionLists = ['m4v', 'avi','mpg','mp4', 'webm', 'mov', 'wmv'];  
 function upload(e){
     let file = e[0];
     if(extensionLists.includes(file.name.split('.').pop().toLowerCase() )){
