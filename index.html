@@ -1,9 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Reverse Video Search</title>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Reverse Video Search Tool</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+
+    <script src='reverseVideoSearch.js'></script>
 </head>
-<body>
-    <a href="reverseVideoSearch.html">reverseVideoSearch</a>
+<body style="overflow: hidden;">
+    
+    <div class='input'>
+
+        <label id="uploadDrop" >
+                       
+            <form class='uploadDrop'>
+                <div style="text-align: center;">UPLOAD</div>
+                <input  type="file" id="fileElem" multiple accept="video/*" onchange="upload(this.files)" style="top: 50%; left: 30%; position: relative;">
+            </form>
+        </label>
+      
+        <video autoplay loop muted = 'vidPreview' class = 'thumbnailPreview' id ='vidPreview'></video>
+
+        <div hidden='true' id='allTheseThings'>
+            <div class = 'frameChose'>
+                <input id='slider' style="width: 100%;" step="0.01" type="range">
+            </div>
+
+            <div>
+                <button onclick="Search()" style="width: 100%; height: 150px; margin-top: 15px;">
+                    Search
+            
+                </button>
+            </div>
+
+        </div>
+    </div>
+    <div class= 'output'>
+        
+            <img id = 'searchConfirm' style=" width: 40%; left: 30%; right: 30%; top: 4%; position: relative; border-width: 5%; border-style: ridge;" hidden='true' onclick="LoveBaby();" >
+          
+            <div hidden='false' id = 'corsWorkAround' onselectstart="return false" style="text-align: center; position: relative; padding-top:40px;">
+                <p>Do the CORSing</p>
+                <p style='font-size:70px; line-height:5; margin: 0;' unselectable='on'>&#8595;</p>
+
+                <div>
+                    <div class="dragOpener" ondragenter="CORSWindow('https://www.google.com/searchbyimage')">Google<br>(Drag & Drop)<br>(Drag Over Button)</div>
+                    <div class="dragOpener" onclick="CORSWindow('https://tineye.com/')">TinyEye<br>(Copy, Click, Paste)<br>(As Image; Avoid Data Url)</div>
+                </div>
+            </div>
+    </div>
 </body>
 </html>
+
+<style>
+.input{
+    background-color: grey;
+    position:  absolute;
+    left: 0;
+    right: 50%;
+    top: 0;
+    height: 100%;
+}
+.output{
+    background-color: salmon;  
+    position:  absolute;
+    right: 0;
+    left: 50%;
+    top: 0;
+
+    height: 100%;
+}
+
+.uploadDrop{
+    padding: 0;
+    background-color: white;
+    border-radius: 25px;
+    padding-top: 80px;
+    float: left;
+    width: 99.4%;
+    left: 0;
+    border-style:groove;
+}
+
+.thumbnailPreview{
+    right: 0; 
+    bottom: 0;
+    width: 100%;
+    height: auto; 
+    float: right;
+}
+
+.dragOpener{
+    float: left;
+    width: 40%;
+
+    margin: 5%;
+    background-color: darkgrey;
+    border-radius: 40px;
+}
+
+
+</style>
