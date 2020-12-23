@@ -25,7 +25,7 @@ window.onload = function() {
 const extensionLists = ['m4v', 'avi','mpg','mp4', 'webm', 'mov', 'wmv'];  
 function upload(e){
     let file = e[0];
-    if(extensionLists.includes(file.name.split('.').pop().toLowerCase() )){
+    if(file && extensionLists.includes(file.name.split('.').pop().toLowerCase() )){
         allTheseThings.hidden = false;
         vidPreview.src = URL.createObjectURL(file)
         vidPreview.playbackRate = 1;
